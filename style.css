@@ -1,0 +1,140 @@
+
+
+body{
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F8;
+    padding-left: 20px;
+    border-top: aqua solid 3px;
+}
+
+.header{
+    margin-left: 10px;
+}
+
+li{
+    list-style-type: none;
+    background-color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header_phrase{
+    font-weight: 100;
+}
+
+.main_blocks{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.main_block_hidden{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 10px 10px 10px;
+    border: lightgray solid 1px;
+
+}
+.main_block_unhidden{
+    width: 200px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    display: none;
+    border: lightgray solid 1px;
+}
+
+.main_block{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    border: lightgray solid 1px;
+}
+.main_block_button_img{
+    display: flex;
+    align-items: center;
+}
+
+.main_button{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 10px 10px 0;
+    padding: 0;
+    transition: 0.2s;
+}
+
+.main_button:hover{
+    transform: scale(1.01);
+}
+
+.main_button_img_reverse{
+    transform: rotate(180deg);
+}
+
+.main_button_text_closed::after{
+    content: ' Показать всё ';
+}
+
+
+.main_button_text_opened::after{
+    content: ' Скрыть ';
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 9000px) and (min-width: 769px){
+    .slider{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 321px){
+    .main_block:nth-child(n+7){
+        display: none;
+    }
+    .slider{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 320px) and (min-width: 1px){
+    .main{
+        display: none;
+    }
+    .header_phrase, header, body, html{
+        background-color: #F8F8F8;
+        margin-top: 0;
+    }
+    .image-slider_image{
+        padding-left: 0;
+    }
+    .image-slider{
+        overflow-x: hidden;
+    }
+
+}
